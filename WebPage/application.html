@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지원 안내 - 서울대학교 빅데이터 AI CEO 과정</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 40px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 30px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #FF6B00;
+        }
+
+        .header {
+            background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .sections {
+            padding: 80px 20px;
+            background: #f5f5f5;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #FF6B00;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 30px 0 20px;
+        }
+
+        .course-overview {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .overview-item {
+            margin-bottom: 20px;
+        }
+
+        .overview-item h4 {
+            color: #FF6B00;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: #FF6B00;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #FF6B00;
+            border-radius: 50%;
+            top: 15px;
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .timeline-content h4 {
+            color: #FF6B00;
+            margin-bottom: 10px;
+        }
+
+        .requirements {
+            margin: 40px 0;
+        }
+
+        .requirements-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .requirements-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .requirements-list li::before {
+            content: '•';
+            color: #FF6B00;
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+        }
+
+        .documents {
+            margin: 40px 0;
+        }
+
+        .documents-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .documents-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .documents-list li::before {
+            content: '•';
+            color: #FF6B00;
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background: #FF6B00;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+
+        .apply-button:hover {
+            background: #e55c00;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: 21px;
+            }
+
+            .nav {
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+            }
+
+            .nav a {
+                margin: 0 8px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .apply-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: #FF6B00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .apply-button:hover {
+            background: #E55C00;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">홈</a>
+        <a href="introduction.html">소개</a>
+        <a href="application.html">지원</a>
+        <a href="notice.html">공지</a>
+        <a href="community.html">커뮤니티</a>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>지원 안내</h1>
+        </div>
+    </header>
+
+    <div class="sections">
+        <div class="section">
+            <h2>지원 안내</h2>
+            <div class="intro-content">
+                <p>디지털 전환 시대의 비즈니스 환경은 빠르게 변화하고 있으며, 그 중심에는 AI와 빅데이터 기술이 자리잡고 있습니다. 기업이 지속적으로 성장하고 경쟁력을 확보하기 위해서는 디지털 혁신이 더 이상 선택이 아닌 필수가 되었습니다.</p>
+                <p>서울대학교는 이러한 시대적 요구에 발맞추어, 고용노동부와 협력하여 '빅데이터 AI CEO 과정'을 기획하여 운영하고 있습니다. 본 과정은 최신의 AI와 빅데이터 기술을 기업 경영에 효과적으로 접목함으로써, 국가 경제와 산업 전반의 혁신을 주도할 리더를 양성하는 것을 목표로 합니다.</p>
+            </div>
+
+            <div class="course-overview">
+                <h3>과정 개요</h3>
+                <div class="overview-item">
+                    <h4>교육 기간</h4>
+                    <p>2025년 5월 23일 ~ 2025년 12월 6일</p>
+                </div>
+                <div class="overview-item">
+                    <h4>교육 일정</h4>
+                    <p>매주 금요일 14:00 ~ 18:00</p>
+                </div>
+                <div class="overview-item">
+                    <h4>교육 장소</h4>
+                    <p>서울대학교</p>
+                </div>
+                <div class="overview-item">
+                    <h4>모집 인원</h4>
+                    <p>30명</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <h3>모집 일정</h3>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>지원서 접수</h4>
+                        <p>2025년 3월 1일 ~ 3월 31일</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>서류 심사</h4>
+                        <p>2025년 4월 1일 ~ 4월 7일</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>면접 심사</h4>
+                        <p>2025년 4월 8일 ~ 4월 14일</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>최종 합격자 발표</h4>
+                        <p>2025년 4월 15일</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>입과식</h4>
+                        <p>2025년 5월 23일</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h3>지원 자격</h3>
+                <ul class="requirements-list">
+                    <li>사업주 또는 사업주로 등록 예정인 자</li>
+                    <li>사업자등록증 사본 제출 가능한 자</li>
+                    <li>고용보험 가입자 또는 가입 예정자</li>
+                    <li>과정 수료 후 6개월 이내 취업 또는 창업 계획이 있는 자</li>
+                </ul>
+            </div>
+
+            <div class="documents">
+                <h3>제출 서류</h3>
+                <ul class="documents-list">
+                    <li>자기소개서</li>
+                    <li>사업자등록증 사본</li>
+                    <li>고용보험 가입 증명서</li>
+                    <li>재직증명서</li>
+                    <li>최종학력 증명서</li>
+                </ul>
+            </div>
+
+            <div class="apply-section" style="text-align: center;">
+                <h3>지원 방법</h3>
+                <p>아래 버튼을 클릭하여 지원서를 작성해주세요.</p>
+                <a href="https://forms.gle/iERPJ841CXr2eHM69" class="apply-button" target="_blank">지원서 바로가기</a>
+            </div>
+
+            <div class="contact-info" style="text-align: center;">
+                <h3>문의하기</h3>
+                <p>서울대학교 CEO 과정 사무국</p>
+                <p>이메일: snuceo1618@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

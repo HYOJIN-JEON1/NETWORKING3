@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울대학교 빅데이터 AI 과정</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left, .right {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .left {
+            background-image: url('images/kdt-bg.jpg');
+        }
+
+        .right {
+            background-image: url('images/ceo-main.png');
+        }
+
+        .left:hover, .right:hover {
+            transform: scale(1.02);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .overlay h2 {
+            font-size: 2rem;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left, .right {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.snukdt.com" class="left">
+            <div class="overlay">
+                <h2>구직자 과정</h2>
+                <p>서울대 빅데이터 AI 핀테크 과정</p>
+            </div>
+        </a>
+        <a href="ceo.html" class="right">
+            <div class="overlay">
+                <h2>CEO 과정</h2>
+                <p>서울대 빅데이터 AI CEO 과정</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울대학교 빅데이터 AI CEO 과정</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/ceo과정 메인후보.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            background-image: url('images/ceo-main.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbulb-icon {
+            font-size: 3rem;
+            color: #FF6B00;
+            margin: 30px 0;
+        }
+
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 40px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 30px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #FF6B00;
+        }
+
+        .sections {
+            padding: 80px 20px;
+            background: #f5f5f5;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #FF6B00;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature i {
+            font-size: 2.5rem;
+            color: #FF6B00;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .seminar-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .seminar-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .networking-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .networking-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .companies-section {
+            overflow: hidden;
+            padding: 40px 0;
+            background: white;
+        }
+
+        .companies-scroll {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            gap: 50px;
+        }
+
+        .company-logo {
+            width: 150px;
+            height: 80px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .testimonial i {
+            font-size: 2rem;
+            color: #FF6B00;
+            margin-bottom: 20px;
+        }
+
+        .testimonial p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .faculty-member {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .faculty-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .faculty-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .faculty-member h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .faculty-member p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .faculty-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 20px;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .contact-message {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1200px) {
+            .faculty-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .faculty-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav {
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+            }
+
+            .nav a {
+                margin: 0 8px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .application-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro-text {
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .course-overview, .application-process, .application-requirements, .application-documents {
+            margin-bottom: 40px;
+        }
+
+        .course-overview h3, .application-process h3, .application-requirements h3, .application-documents h3 {
+            color: #FF6B00;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .course-overview ul, .application-requirements ul, .application-documents ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .course-overview li, .application-requirements li, .application-documents li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .course-overview li:before, .application-requirements li:before, .application-documents li:before {
+            content: "•";
+            color: #FF6B00;
+            position: absolute;
+            left: 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .timeline-item .date {
+            min-width: 200px;
+            font-weight: bold;
+            color: #FF6B00;
+        }
+
+        .timeline-item .event {
+            flex: 1;
+        }
+
+        .application-link {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .apply-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #FF6B00;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .apply-button:hover {
+            background: #e05a00;
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            color: #FF6B00;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-item .date {
+                margin-bottom: 10px;
+            }
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .program-benefits {
+            margin-top: 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #FF6B00;
+        }
+
+        .benefit-item h4 {
+            color: #FF6B00;
+            margin-bottom: 15px;
+        }
+
+        .application-preview-content {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .application-date {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .detail-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #FF6B00;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .detail-button:hover {
+            background: #e05a00;
+            transform: translateY(-2px);
+        }
+
+        .community-content {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .slack-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            background: #4A154B;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .slack-button i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .slack-button:hover {
+            background: #3a1039;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">홈</a>
+        <a href="introduction.html">소개</a>
+        <a href="application.html">지원</a>
+        <a href="notice.html">공지</a>
+        <a href="community.html">커뮤니티</a>
+    </nav>
+
+    <div class="header">
+        <div class="header-content">
+            <h1>서울대학교 빅데이터 AI CEO 과정</h1>
+            <p>세계적 석학 서울대 교수진과 함께하는 CEO 역량 증진 프로그램</p>
+        </div>
+    </div>
+
+    <div class="sections">
+        <div class="section">
+            <h2>세계적 석학 서울대 교수진과의 CEO 역량 증진</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>세계적 석학 서울대 교수진</h3>
+                    <p>빅데이터 AI 분야를 리딩하는 서울대 교수진, 석박사급 인력이 직접 교육을 밀착지원합니다.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>차별화된 커리큘럼</h3>
+                    <p>AI 윤리와 미래 과제부터 생성형 AI 비즈니스 연구까지, 실무 중심의 차별화된 커리큘럼을 제공합니다.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-handshake"></i>
+                    <h3>실전 프로젝트 중심 학습</h3>
+                    <p>AI와 빅데이터를 활용한 비즈니스 모델 개발을 수행하며, 실제 비즈니스 문제를 해결할 수 있는 실질적 역량을 배양합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>밍글링 이벤트</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h3>이전 기수와의 교류</h3>
+                    <p>선배 CEO들과의 만남을 통해 실질적인 비즈니스 인사이트와 네트워크를 형성합니다.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-handshake"></i>
+                    <h3>비즈니스 협력 기회</h3>
+                    <p>다양한 업계의 CEO들과 만나 새로운 비즈니스 기회를 발견하고 협력 관계를 구축합니다.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>아이디어 교류</h3>
+                    <p>다양한 분야의 CEO들과 함께 새로운 비즈니스 아이디어를 공유하고 발전시킵니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>네트워킹 기회</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>CEO 네트워크</h3>
+                    <p>다양한 업계의 AI 전문 역량을 갖춘 CEO 및 고위 임원들과 교류할 수 있는 기회를 제공합니다.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-comments"></i>
+                    <h3>비즈니스 토론</h3>
+                    <p>실무 중심의 토론을 통해 비즈니스 모델을 발전시키고 성장 전략을 수립합니다.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>멘토링</h3>
+                    <p>경험 많은 멘토들과 함께 비즈니스 모델을 발전시키고 성장 전략을 수립합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="contact">
+                <p class="contact-message">서울대학교 빅데이터 AI CEO 과정과 함께 비즈니스 혁신과 성장을 이끌어보세요</p>
+                <p>서울대학교 CEO 과정 사무국</p>
+                <p>전화: 02-1234-5678</p>
+                <p>이메일: snuceo1618@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
